@@ -1,6 +1,6 @@
 <template>
     <div>
-        hello
+        {{msg}}
     </div>
 </template>
 
@@ -10,6 +10,9 @@ export default {
 
   data: () => ({
 
-  })
+  }),
+    props: {
+      msg: String
+    }
 };
 </script>

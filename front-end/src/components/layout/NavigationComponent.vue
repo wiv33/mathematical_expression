@@ -33,54 +33,53 @@
                     cols="12"
                     md="6"
             >
-                <v-card-text>
-                    <v-scroll-x-transition
-                            group
-                            hide-on-leave
-                    >
-                        <v-chip
-                                v-for="(selection, i) in tree"
-                                :key="i"
-                                color="grey"
-                                dark
-                                small
-                                class="ma-1"
-                        >
-                            <v-icon left small>mdi-beer</v-icon>
-                            {{ selection.name }}
-                        </v-chip>
-                    </v-scroll-x-transition>
-                </v-card-text>
+<!--                <v-card-text>-->
+<!--                    <v-scroll-x-transition-->
+<!--                            group-->
+<!--                            hide-on-leave-->
+<!--                    >-->
+<!--                        <v-chip-->
+<!--                                v-for="(selection, i) in tree"-->
+<!--                                :key="i"-->
+<!--                                color="grey"-->
+<!--                                dark-->
+<!--                                small-->
+<!--                                class="ma-1"-->
+<!--                        >-->
+<!--                            <v-icon left small>mdi-beer</v-icon>-->
+<!--                            {{ selection.name }}-->
+<!--                        </v-chip>-->
+<!--                    </v-scroll-x-transition>-->
+<!--                </v-card-text>-->
             </v-col>
         </v-row>
 
-        <v-toolbar
-                color="gray"
-                dark
-                flat
-        >
-            <v-toolbar-title>ETC</v-toolbar-title>
-        </v-toolbar>
-        <v-row>
-            <v-col>
-                <v-card-text>
-                    <v-treeview
-                            v-model="tree"
-                            :load-children="fetch"
-                            :items="items"
-                            selected-color="indigo"
-                            open-on-click
-                            selectable
-                            return-object
-                            expand-icon="mdi-chevron-down"
-                            on-icon="mdi-bookmark"
-                            off-icon="mdi-bookmark-outline"
-                            indeterminate-icon="mdi-bookmark-minus"
-                    >
-                    </v-treeview>
-                </v-card-text>
-            </v-col>
-        </v-row>
+<!--        <v-toolbar-->
+<!--                color="gray"-->
+<!--                dark-->
+<!--                flat-->
+<!--        >-->
+<!--            <v-toolbar-title>ETC</v-toolbar-title>-->
+<!--        </v-toolbar>-->
+<!--        <v-row>-->
+<!--            <v-col>-->
+<!--                <v-card-text>-->
+<!--                    <v-treeview-->
+<!--                            v-model="tree"-->
+<!--                            :load-children="fetch"-->
+<!--                            :items="items"-->
+<!--                            selected-color="indigo"-->
+<!--                            open-on-click-->
+<!--                            return-object-->
+<!--                            expand-icon="mdi-chevron-down"-->
+<!--                            on-icon="mdi-bookmark"-->
+<!--                            off-icon="mdi-bookmark-outline"-->
+<!--                            indeterminate-icon="mdi-bookmark-minus"-->
+<!--                    >-->
+<!--                    </v-treeview>-->
+<!--                </v-card-text>-->
+<!--            </v-col>-->
+<!--        </v-row>-->
 
         <v-divider></v-divider>
 
@@ -107,7 +106,7 @@
 
                 return [{
                     id: 1,
-                    name: 'All Breweries',
+                    name: '수식',
                     children,
                 }]
             },
