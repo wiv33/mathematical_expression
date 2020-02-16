@@ -8,16 +8,16 @@
       <v-col>
         <v-card-text>
           <v-treeview
-                  v-model="tree"
-                  :open="open"
-                  :items="items"
-                  activatable
-                  item-key="id"
-                  open-on-click
+            v-model="tree"
+            :open="open"
+            :items="items"
+            activatable
+            item-key="id"
+            open-on-click
           >
             <template v-slot:prepend="{ item, open }">
               <v-icon v-if="!item.file">
-                {{ open ? 'mdi-folder-open' : 'mdi-folder' }}
+                {{ open ? "mdi-folder-open" : "mdi-folder" }}
               </v-icon>
               <v-icon v-else @click="changeSrc(item)">
                 {{ files[item.file] }}
@@ -39,17 +39,53 @@ import Constant from "../../assets/Constant";
 export default {
   name: "NavigationComponent",
   data: () => ({
-    open: ['수식'],
+    open: ["수식"],
     isLoading: false,
     tree: [],
     types: [],
     categories: [],
     files: {
-      txt: 'mdi-file-document-outline'
+      txt: "mdi-file-document-outline"
     }
   }),
   created() {
-    this.fetch()
+    this.categories = [{
+      "id": 1,
+      "category": "함수",
+      "name": "표현식",
+      "src": "",
+      "file": "txt"
+    },{
+      "id": 2,
+      "category": "미분",
+      "name": "최소제곱법",
+      "src": "https://docs.google.com/document/d/e/2PACX-1vT_x9WS6keS0sGmYxp3sY6WrfUmeAzz0jfE-_3hlZlvtMEmBrxxF7fyHwnWppcfOULT4_0szq8DDKCt/pub?embedded=true",
+      "file": "txt"
+    },{
+      "id": 3,
+      "category": "미분",
+      "name": "최급하강법",
+      "src": "",
+      "file": "txt"
+    },{
+      "id": 4,
+      "category": "미분",
+      "name": "다항식 회귀",
+      "src": "",
+      "file": "txt"
+    },{
+      "id": 5,
+      "category": "미분",
+      "name": "중회귀",
+      "src": "",
+      "file": "txt"
+    },{
+      "id": 6,
+      "category": "미분",
+      "name": "확률 경사하강법",
+      "src": "",
+      "file": "txt"
+    }]
   },
   computed: {
     items() {
@@ -66,27 +102,28 @@ export default {
           children
         }
       ];
-    },
+    }
   },
 
   watch: {
     categories(val) {
       this.types = val
-              .reduce((acc, cur) => {
-                const type = cur.category;
-                if (!acc.includes(type)) acc.push(type);
-                return acc;
-              }, [])
-              .sort();
+        .reduce((acc, cur) => {
+          const type = cur.category;
+          if (!acc.includes(type)) acc.push(type);
+          return acc;
+        }, [])
+        .sort();
     }
   },
 
   methods: {
-    fetch() {
+    fetch: function () {
       if (this.categories.length) return;
 
-      this.$axios.get("/navigationData.json")
-              .then(res => this.categories = res.data)
+      this.axios
+              .get("/navigationData.json")
+              .then(res => (this.categories = res.data))
               .catch(err => console.log(err));
     },
     getChildren(type) {
@@ -108,7 +145,7 @@ export default {
       return `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
     },
     changeSrc: function(item) {
-      this.$store.commit(Constant.CHANGE_SRC, item)
+      this.$store.commit(Constant.CHANGE_SRC, item);
     }
   }
 };

@@ -1,3 +1,3 @@
 export default {
-    CHANGE_SRC : "changeSrc"
-}
+  CHANGE_SRC: "changeSrc"
+};

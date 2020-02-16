@@ -5,19 +5,18 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex'
+import { mapState } from "vuex";
 export default {
   name: "HelloWorld",
 
-  data: () => ({
-  }),
-  computed: mapState(['src'])
+  data: () => ({}),
+  computed: mapState(["src"])
 };
 </script>
 
 <style scoped>
-  iframe {
-    width: 900px;
-    height: 100vh;
-  }
+iframe {
+  width: 900px;
+  height: 100vh;
+}
 </style>

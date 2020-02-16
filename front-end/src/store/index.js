@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    src: ''
+    src: ""
   },
   mutations: {
     [Constant.CHANGE_SRC]: (state, payload) => {
