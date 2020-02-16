@@ -2,30 +2,36 @@
   "id": 1,
   "category": "함수",
   "name": "표현식",
-  "src": ""
+  "src": "",
+  "file": "txt"
 },{
   "id": 2,
   "category": "미분",
   "name": "최소제곱법",
-  "src": "https://docs.google.com/document/d/e/2PACX-1vT_x9WS6keS0sGmYxp3sY6WrfUmeAzz0jfE-_3hlZlvtMEmBrxxF7fyHwnWppcfOULT4_0szq8DDKCt/pub?embedded=true"
+  "src": "https://docs.google.com/document/d/e/2PACX-1vT_x9WS6keS0sGmYxp3sY6WrfUmeAzz0jfE-_3hlZlvtMEmBrxxF7fyHwnWppcfOULT4_0szq8DDKCt/pub?embedded=true",
+  "file": "txt"
 },{
   "id": 3,
   "category": "미분",
   "name": "최급하강법",
-  "src": ""
+  "src": "",
+  "file": "txt"
 },{
   "id": 4,
   "category": "미분",
   "name": "다항식 회귀",
-  "src": ""
+  "src": "",
+  "file": "txt"
 },{
   "id": 5,
   "category": "미분",
   "name": "중회귀",
-  "src": ""
+  "src": "",
+  "file": "txt"
 },{
   "id": 6,
   "category": "미분",
   "name": "확률 경사하강법",
-  "src": ""
+  "src": "",
+  "file": "txt"
 }]

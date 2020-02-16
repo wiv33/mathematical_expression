@@ -5,13 +5,13 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
 export default {
   name: "HelloWorld",
 
-  data: () => ({}),
-  props: {
-    src: String
-  }
+  data: () => ({
+  }),
+  computed: mapState(['src'])
 };
 </script>
 
