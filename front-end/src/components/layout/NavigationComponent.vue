@@ -88,9 +88,8 @@ export default {
     fetch() {
       if (this.categories.length) return;
 
-      fetch("/navigationData.json")
-              .then(res => res.json())
-              .then(res => (this.categories = res))
+      this.$axios.get("/navigationData.json")
+              .then(res => this.categories = res.data)
               .catch(err => console.log(err));
     },
     getChildren(type) {
