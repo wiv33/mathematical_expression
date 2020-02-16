@@ -45,7 +45,14 @@ export default {
     types: [],
     categories: [],
     files: {
-      txt: "mdi-file-document-outline"
+      html: 'mdi-language-html5',
+      js: 'mdi-nodejs',
+      json: 'mdi-json',
+      md: 'mdi-markdown',
+      pdf: 'mdi-file-pdf',
+      png: 'mdi-file-image',
+      txt: 'mdi-file-document-outline',
+      xls: 'mdi-file-excel'
     }
   }),
   created() {
@@ -60,7 +67,7 @@ export default {
       "category": "미분",
       "name": "최소제곱법",
       "src": "https://docs.google.com/document/d/e/2PACX-1vT_x9WS6keS0sGmYxp3sY6WrfUmeAzz0jfE-_3hlZlvtMEmBrxxF7fyHwnWppcfOULT4_0szq8DDKCt/pub?embedded=true",
-      "file": "txt"
+      "file": "pdf"
     },{
       "id": 3,
       "category": "미분",
