@@ -93,7 +93,7 @@ export default {
       if (this.categories.length) return;
 
       this.axios
-              .get("/navigationData.json")
+              .get("/mathematical_expression/" + "/navigationData.json")
               .then(res => (this.categories = res.data))
               .catch(err => console.log(err));
     },
