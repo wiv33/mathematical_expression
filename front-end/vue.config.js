@@ -2,6 +2,6 @@ const path = require("path");
 
 module.exports = {
   outputDir: path.resolve(__dirname, "../docs"),
-  publicPath: path.resolve("../"),
+  publicPath: path.resolve("../docs"),
   transpileDependencies: ["vuetify"]
 };
