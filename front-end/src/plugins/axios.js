@@ -54,7 +54,6 @@ Plugin.install = function(Vue, options) {
       }
     }
   });
-  console.log(options)
 };
 
 Vue.use(Plugin);
