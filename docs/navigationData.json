@@ -5,6 +5,12 @@
   "src": "",
   "file": "txt"
 },{
+  "id": 7,
+  "category": "함수",
+  "name": "시그모이드",
+  "src": "https://docs.google.com/document/d/1k3oCYKVIb9TzQLXeRaw-0byfGSqkjb1Ej6Iazg2e1Es/edit?usp=sharing",
+  "file": "txt"
+},{
   "id": 2,
   "category": "미분",
   "name": "최소제곱법",
